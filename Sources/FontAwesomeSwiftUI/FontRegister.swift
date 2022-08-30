@@ -44,7 +44,12 @@ final class FontRegister {
         #if SWIFT_PACKAGE
             return Bundle.module.url(forResource: fontName, withExtension: "otf")
         #else
-            return Bundle.main.url(forResource: fontName, withExtension: "otf")
+            let bundle = Bundle(for: FontRegister.self)
+            let resourceURL = bundle.resourceURL?.appendingPathComponent("FontAwesomeSwiftUI.bundle")
+            guard let resourceBundle = Bundle(url: resourceURL) else {
+                return nil
+            }
+            return resourceBundle.url(forResource: fontName, withExtension: "otf")
         #endif
     }
 }
