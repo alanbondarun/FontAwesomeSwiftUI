@@ -22,7 +22,7 @@ public struct FaIcon: View {
             ? (FontStyle.fromName(String(words[0])) ?? .solid)
             : .solid
         let iconName = String(words.last ?? "")
-            .replacingOccurrences(of: "fa-", with: "")
+            .replacingOccurrences(of: "^fa-", with: "", options: .regularExpression)
 
         Text(iconName)
             .font(.awesome(style: style, size: size))
