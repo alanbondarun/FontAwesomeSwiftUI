@@ -21,3 +21,18 @@ public enum FontStyle: String, CaseIterable {
         }
     }
 }
+
+extension FontStyle {
+    static func fromName(_ styleName: String) -> Self? {
+        switch styleName {
+        case "fa-solid":
+            return .solid
+        case "fa-regular":
+            return .regular
+        case "fa-brand":
+            return .brand
+        default:
+            return nil
+        }
+    }
+}
