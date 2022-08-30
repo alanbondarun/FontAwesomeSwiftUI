@@ -34,7 +34,7 @@ def main():
             )
             f.write(f'    case {enum_name} = "{icon_name}"\n')
 
-        f.write("}")
+        f.write("}\n")
 
 
 if __name__ == "__main__":
