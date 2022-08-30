@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct FaIcon: View {
-    init(
+    public init(
         _ className: String,
         size: CGFloat
     ) {
