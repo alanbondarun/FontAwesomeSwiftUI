@@ -11,6 +11,8 @@ import UIKit
 import AppKit
 #endif
 
+import Foundation
+
 final class FontRegister {
     #if os(iOS) || os(tvOS)
     func register(fontName: String) {
@@ -39,6 +41,10 @@ final class FontRegister {
     #endif
 
     private func url(fontName: String) -> URL? {
-        return Bundle.module.url(forResource: fontName, withExtension: "otf")
+        #if SWIFT_PACKAGE
+            return Bundle.module.url(forResource: fontName, withExtension: "otf")
+        #else
+            return Bundle.main.url(forResource: fontName, withExtension: "otf")
+        #endif
     }
 }
