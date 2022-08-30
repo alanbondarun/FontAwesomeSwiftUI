@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FaIcon: View {
+public struct FaIcon: View {
     init(
         _ className: String,
         size: CGFloat
@@ -16,7 +16,7 @@ struct FaIcon: View {
         self.size = size
     }
 
-    var body: some View {
+    public var body: some View {
         let words = className.split(separator: " ", maxSplits: 2)
         let style = words.count == 2
             ? (FontStyle.fromName(String(words[0])) ?? .solid)
