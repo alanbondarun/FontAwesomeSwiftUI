@@ -29,7 +29,7 @@ extension FontStyle {
             return .solid
         case "fa-regular":
             return .regular
-        case "fa-brand":
+        case "fa-brands":
             return .brand
         default:
             return nil

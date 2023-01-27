@@ -1,10 +1,3 @@
-//
-//  SwiftUIView.swift
-//  
-//
-//  Created by alanb on 2022/08/30.
-//
-
 import SwiftUI
 
 public struct FaIcon: View {
